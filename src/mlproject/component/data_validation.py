@@ -21,13 +21,13 @@ class DataValidation:
                 if col not in all_schema:
                     validation_status = False
                     with open(self.config.STATUS_FILE, 'w') as f:
-                        f.write(f'validation status for columns{validation_status}')
+                        f.write(f'validation status for columns {validation_status}')
 
                 
                 else:
                     validation_status = True
                     with open(self.config.STATUS_FILE, 'w') as f:
-                        f.write(f'validation status for columns{validation_status}')
+                        f.write(f'validation status for columns {validation_status}')
 
                 return validation_status
 
@@ -50,13 +50,13 @@ class DataValidation:
                 if datatype not in all_schema_datatypes:
                     validation_status = False
                     with open(self.config.STATUS_FILE, 'a') as f:
-                        f.write(f'\n validation status for data types{validation_status}')
+                        f.write(f'\n validation status for data types {validation_status}')
 
                 
                 else:
                     validation_status = True
                     with open(self.config.STATUS_FILE, 'a') as f:
-                        f.write(f'\n validation status for data types{validation_status}')
+                        f.write(f'\n validation status for data types {validation_status}')
 
                 return validation_status
 

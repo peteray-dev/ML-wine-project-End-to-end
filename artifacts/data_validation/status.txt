@@ -1,2 +1,2 @@
 validation status for columns True
- validation status for data types True 
+ validation status for data types True
