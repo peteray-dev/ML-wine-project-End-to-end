@@ -5,7 +5,7 @@ from sklearn.preprocessing import StandardScaler
 from mlproject.config.configuration import DataTransformationConfig
 import pandas as pd
 import os
-
+import joblib
 
 
 
@@ -31,6 +31,9 @@ class DataTransformation:
         # Scale the features in the train and test sets
         train[features] = scaler.fit_transform(train[features])
         test[features] = scaler.transform(test[features])
+
+        joblib.dump(scaler, os.path.join(self.config.root_dir, 'scaler.joblib'))
+
 
         # Save the scaled train and test sets
         train.to_csv(os.path.join(self.config.root_dir, 'train.csv'), index=False)
