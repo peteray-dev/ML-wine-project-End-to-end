@@ -10,8 +10,10 @@ class PredictionPipeline:
 
     def predict(self, data):
         if not isinstance(data, pd.DataFrame):
-            input_data = pd.DataFrame([input_data])
+            input_data = pd.DataFrame(data)
 
+        
+        print(f'fsdf{input_data}')
         # Scale features
         features = self.scaler.transform(input_data)
 

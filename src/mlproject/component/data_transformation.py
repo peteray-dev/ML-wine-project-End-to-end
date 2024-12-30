@@ -18,6 +18,7 @@ class DataTransformation:
         # Load data
         data = pd.read_csv(self.config.data_path)
 
+        data = data.drop(columns=['Id'])
         # Split into train and test sets
         train, test = train_test_split(data, test_size=0.2, random_state=42)
 
